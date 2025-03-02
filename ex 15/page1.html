@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestial Personality Archetype Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #D67AB8;
+            --secondary: #9C72B0;
+            --accent: #FFB6D9;
+            --background: #FFF5FB;
+            --text: #4A2B4D;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #FFF5FB 0%, #F8E9F4 100%);
+            color: var(--text);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 0 rgba(255,182,217,0.1);
+        }
+
+        .question {
+            margin: 2rem 0;
+            padding: 25px;
+            background: #FFF;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .question:hover {
+            transform: translateY(-3px);
+        }
+
+        .question h3 {
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .options label {
+            display: block;
+            margin: 10px 0;
+            padding: 18px;
+            background: #FFF8FC;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            border: 2px solid transparent;
+        }
+
+        .options label:hover {
+            background: #FFEFF7;
+            transform: translateX(10px);
+        }
+
+        input[type="radio"]:checked + label {
+            background: var(--accent);
+            border-color: var(--primary);
+            font-weight: 500;
+        }
+
+        button {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 18px 45px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: block;
+            margin: 3rem auto 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(214,122,184,0.3);
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(214,122,184,0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌸 Celestial Personality Archetype 🌸</h1>
+        <form id="quizForm">
+            <!-- Emotional Control Questions -->
+            <div class="question">
+                <h3>1. When something unexpected happens that's stressful:</h3>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A" required> React immediately</label>
+                    <label><input type="radio" name="q1" value="B"> Pause and breathe</label>
+                    <label><input type="radio" name="q1" value="C"> Stay calm</label>
+                    <label><input type="radio" name="q1" value="D"> Handle with ease</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>2. Imagine you're stuck in traffic for an hour:</h3>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A" required> Frustrated and annoyed</label>
+                    <label><input type="radio" name="q2" value="B"> Slightly impatient</label>
+                    <label><input type="radio" name="q2" value="C"> Relax and pass time</label>
+                    <label><input type="radio" name="q2" value="D"> Completely at ease</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>3. Handling others' emotional problems:</h3>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A" required> Anxious and unsure</label>
+                    <label><input type="radio" name="q3" value="B"> Try but feel awkward</label>
+                    <label><input type="radio" name="q3" value="C"> Stay calm and help</label>
+                    <label><input type="radio" name="q3" value="D"> Naturally composed</label>
+                </div>
+            </div>
+
+            <!-- Intelligence Questions -->
+            <div class="question">
+                <h3>4. Approaching difficult subjects:</h3>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A" required> Avoid thinking about it</label>
+                    <label><input type="radio" name="q4" value="B"> Ask someone else</label>
+                    <label><input type="radio" name="q4" value="C"> Break it down</label>
+                    <label><input type="radio" name="q4" value="D"> Love the challenge</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>5. Learning new challenging things:</h3>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A" required> Overwhelmed</label>
+                    <label><input type="radio" name="q5" value="B"> Nervous but push through</label>
+                    <label><input type="radio" name="q5" value="C"> Confident in learning</label>
+                    <label><input type="radio" name="q5" value="D"> Enjoy the challenge</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>6. Solving difficult problems:</h3>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A" required> Need help quickly</label>
+                    <label><input type="radio" name="q6" value="B"> Break into steps</label>
+                    <label><input type="radio" name="q6" value="C"> Strategic thinking</label>
+                    <label><input type="radio" name="q6" value="D"> Creative solutions</label>
+                </div>
+            </div>
+
+            <!-- Famousness Questions -->
+            <div class="question">
+                <h3>7. Being noticed in social settings:</h3>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A" required> Nervous and avoid</label>
+                    <label><input type="radio" name="q7" value="B"> Slightly uncomfortable</label>
+                    <label><input type="radio" name="q7" value="C"> Enjoy attention</label>
+                    <label><input type="radio" name="q7" value="D"> Love being noticed</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>8. Group interactions:</h3>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A" required> Mostly listen</label>
+                    <label><input type="radio" name="q8" value="B"> Talk a little</label>
+                    <label><input type="radio" name="q8" value="C"> Actively engage</label>
+                    <label><input type="radio" name="q8" value="D"> Lead the group</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>9. Giving advice to others:</h3>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A" required> Uncomfortable</label>
+                    <label><input type="radio" name="q9" value="B"> Not always confident</label>
+                    <label><input type="radio" name="q9" value="C"> Good about helping</label>
+                    <label><input type="radio" name="q9" value="D"> Flattered and enjoy</label>
+                </div>
+            </div>
+
+            <button type="submit">✨ Reveal My Archetype ✨</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const scores = {
+                emotional: calculateScore(['q1', 'q2', 'q3']),
+                intelligence: calculateScore(['q4', 'q5', 'q6']),
+                famousness: calculateScore(['q7', 'q8', 'q9'])
+            };
+
+            const archetype = generateArchetype(scores);
+            // window.location.href = `result.html?type=${encodeURIComponent(archetype)}`;
+        });
+
+        function calculateScore(questions) {
+            let total = 0;
+            questions.forEach(q => {
+                const value = document.querySelector(`input[name="${q}"]:checked`).value;
+                total += {A:0, B:1, C:2, D:3}[value];
+            });
+            return total <= 3 ? 'low' : total <= 6 ? 'medium' : 'high';
+        }
+
+        function generateArchetype(scores) {
+            const archetypes = {
+                emotional: { low: 'Moonlit', medium: 'Starlight', high: 'Solar' },
+                intelligence: { low: 'Dreamer', medium: 'Sage', high: 'Oracle' },
+                famousness: { low: 'Wallflower', medium: 'Enchantress', high: 'Captivator' }
+            };
+            return `${archetypes.emotional[scores.emotional]}-${archetypes.intelligence[scores.intelligence]}-${archetypes.famousness[scores.famousness]}`;
+        }
+    </script>
+</body>
+</html>

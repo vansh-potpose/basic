@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jay pubg</title>
+    <style>
+        *{margin: 0;
+        padding: 0;}
+        body{
+            background-color: #333333;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .container{
+            background-color: #0c0c0c;
+            color: white;
+            height:670px;
+            margin-top: 50px;
+            margin: 20px 2px 2px 2px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3>hacking your laptop</h3>
+    <div class="container">
+
+    </div>
+    <script>
+        let randomTime =async () => {
+          return new  Promise((resolve, reject) => {
+            timeout=1+6*(Math.random());
+            setTimeout(() => {
+                resolve()
+            }, timeout*1000);
+          })
+          
+        }
+        
+        let addItem =async (text) => {
+            await randomTime()
+          let div =document.createElement("div")
+          div.innerHTML=text;
+          document.querySelector(".container").append(div)
+        }
+        
+        async function main(){
+            let t=setInterval(() => {
+                let last =document.querySelector(".container").lastElementChild;
+                if(last.innerHTML.endsWith("...")){
+                    last.innerHTML=last.innerHTML.slice(0,last.innerHTML.length-3)
+                }else{
+                    last.innerHTML=last.innerHTML+"."
+                }
+            }, 600);
+            let text=[
+                "initializing hacking",
+                "acessing files",
+                "reading your files",
+                "password file detected",
+                "sending password and personal files to server",
+                "clearing up"
+            ]
+            for (const item of text) {
+                await addItem(item);
+            }
+            await randomTime()
+            clearInterval(t)
+        }
+        main()
+            </script>
+</body>
+</html>

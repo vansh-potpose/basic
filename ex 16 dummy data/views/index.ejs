@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+        }
+        .container button{
+            background-color: rgb(23, 161, 23);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            width: 100px;
+            padding: 10px;
+        }
+        .container button:hover{
+            background-color: green;
+           
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button>genrate now</button>
+    </div>
+    <script>
+        document.querySelector("button").addEventListener("click",async ()=>{
+            console.log(" hello");
+            let a=await fetch("/generate")
+            let r=await a.json()
+            console.log(r);
+            
+            
+        })
+    </script>
+</body>
+</html>

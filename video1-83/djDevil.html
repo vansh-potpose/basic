@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ devil</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #0f0f0f;
+        }
+        .card{
+            display: flex;
+            padding: 10px;
+            gap: 20px;
+            color: white;
+            border: 1px solid gray;
+        }
+        .card img{
+            width: 150px;
+            border-radius: 10px;
+        }
+        .card .text p{
+            padding-top: 20px;
+            color: #7b7a79;
+        }
+        .card .text{
+            height: 100px;
+        }
+        .card .video{
+            position: relative;
+        }
+        .card .video p{
+            top: 74px;
+            position: absolute;
+            left: 97px;            
+            background-color: black;
+            text-align: center;
+            padding: 2px 5px;
+            border-radius: 5px;
+        }
+        .contains{
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+        #createit{
+            padding: 10px;
+            background-color: red;
+            border: none;
+            border-radius: 9px;
+            color: white;
+            font-weight: bold;
+                }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="video">
+                <img src="card_img.avif" alt="thumnail">
+                <p>33:00</p>
+            </div>
+            <div class="text">
+                <h3 class="tittle">Lorem ipsum, dolor sit amet consectetur adipisicing.</h3>
+                <p>code with harry.300k views.3 months ago</p>
+            </div>
+            
+            
+        </div>
+    </div>
+        <div class="contains">
+            <button id="createit">add frame</button>
+
+        </div>
+    <script src="djDevil.js"></script>
+</body>
+</html>

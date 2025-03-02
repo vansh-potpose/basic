@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        .header .name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar {
+            display: flex;
+            gap: 15px;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        .navbar a:hover {
+            color: #ff0;
+            cursor: pointer;
+        }
+        section {
+            padding: 20px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            flex: 1 1 calc(33% - 40px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            width: 50px;
+            height: 50px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .home-icon {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+        .home-icon img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="name">John Doe</div>
+        <nav class="navbar">
+            <a href="#about">About</a>
+            <a href="#projects">Project details</a>
+            <a href="#skills">Skills</a>
+            <a href="#recommendations">Recommendations</a>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="data:image/png;base64,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" alt="Profile Image" style="width:150px;height:150px;">
+        <p>Hello, I am John Doe, a web developer with a passion for creating beautiful and functional websites. With a background in computer science and years of experience in front-end development, I specialize in HTML, CSS, and JavaScript. I love tackling new challenges and continuously improving my skills.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="card-container">
+            <div class="card skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML Logo">
+                <p>HTML</p>
+            </div>
+            <div class="card skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS Logo">
+                <p>CSS</p>
+            </div>
+            <div class="card skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo">
+                <p>JavaScript</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Project Details</h2>
+        <div class="project">
+            <h3>Project 1: Portfolio Website</h3>
+            <p>A personal portfolio website to showcase my skills, projects, and experience. Built using HTML, CSS, and JavaScript, this website is fully responsive and features a modern, clean design.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2: E-commerce Platform</h3>
+            <p>An e-commerce platform that supports multiple vendors, secure transactions, and a user-friendly interface. Developed using React and Node.js, this platform ensures a smooth shopping experience for users.</p>
+        </div>
+        <div class="project">
+            <h3>Project 3: Blogging Platform</h3>
+            <p>A blogging platform where users can create and share their posts. It features user authentication, comment sections, and a rich text editor. Built with Django and Bootstrap.</p>
+        </div>
+    </section>
+
+    <section id="recommendations">
+        <h2>Recommendations</h2>
+        <div class="card-container">
+            <div class="card recommendation">
+                <p>"John is a highly skilled developer with a keen eye for detail. His ability to solve complex problems and deliver quality work is impressive." - Jane Smith</p>
+            </div>
+            <div class="card recommendation">
+                <p>"Working with John was a pleasure. He is knowledgeable, reliable, and always goes above and beyond to ensure project success." - Michael Johnson</p>
+            </div>
+            <div class="card recommendation">
+                <p>"John's expertise in web development is exceptional. He has a deep understanding of modern web technologies and best practices." - Emily Davis</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="add-recommendation">
+        <h2>Add a Recommendation</h2>
+        <form id="recommendation-form">
+            <input type="text" id="new-recommendation" placeholder="Enter recommendation">
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <div class="home-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="black">
+            <path d="M9.06165 4.82633L3.23911 9.92134C2.7398 10.3583 3.07458 11.1343 3.76238 11.1343C4.18259 11.1343 4.52324 11.4489 4.52324 11.8371V15.0806C4.52324 17.871 4.52324 19.2662 5.46176 20.1331C6.40029 21 7.91082 21 10.9319 21H13.0681C16.0892 21 17.5997 21 18.5382 20.1331C19.4768 19.2662 19.4768 17.871 19.4768 15.0806V11.8371C19.4768 11.4489 19.8174 11.1343 20.2376 11.1343C20.9254 11.1343 21.2602 10.3583 20.7609 9.92134L14.9383 4.82633C13.5469 3.60878 12.8512 3 12 3C11.1488 3 10.4531 3.60878 9.06165 4.82633Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12 16H12.009" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        </a>
+    </div>
+
+    <script>
+        document.getElementById('recommendation-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let newRecommendation = document.getElementById('new-recommendation').value;
+            let recommendations = document.querySelector('#recommendations .card-container');
+            let newDiv = document.createElement('div');
+            newDiv.classList.add('card', 'recommendation');
+            newDiv.innerHTML = `<p>"${newRecommendation}" - Anonymous</p>`;
+            recommendations.appendChild(newDiv);
+            alert('Recommendation added successfully!');
+            document.getElementById('new-recommendation').value = '';
+        });
+    </script>
+</body>
+</html>

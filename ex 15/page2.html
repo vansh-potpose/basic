@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Celestial Analysis</title>
+    <style>
+        :root {
+            --primary: #D67AB8;
+            --secondary: #9C72B0;
+            --accent: #FFB6D9;
+            --background: #FFF5FB;
+            --text: #4A2B4D;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #FFF5FB 0%, #F8E9F4 100%);
+            color: var(--text);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .archetype-card {
+            background: #FFF;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+            border-left: 5px solid var(--accent);
+        }
+
+        .trait {
+            margin: 1.5rem 0;
+            padding: 20px;
+            background: #FFF8FC;
+            border-radius: 15px;
+        }
+
+        .strategy-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .strategy-list li {
+            padding: 15px;
+            margin: 10px 0;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .strategy-list li::before {
+            content: '🌸';
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="archetypeTitle"></h1>
+        <div id="analysisContent"></div>
+    </div>
+
+    <script>
+        const analysisData = {
+            'Moonlit-Dreamer-Wallflower': {
+                emotional: {
+                    title: 'Moonlit Intuition',
+                    desc: 'Your emotional responses are deeply intuitive but sometimes overwhelming. You feel things intensely and need regular emotional check-ins.'
+                },
+                intelligence: {
+                    title: 'Creative Dreamer',
+                    desc: 'You approach challenges with creative thinking but may need more structure for complex problems.'
+                },
+                famousness: {
+                    title: 'Subtle Observer',
+                    desc: 'You prefer meaningful one-on-one connections over large social gatherings.'
+                },
+                strategies: [
+                    'Daily mindfulness journaling',
+                    'Creative expression therapy',
+                    'Small group social activities'
+                ]
+            },
+            'Solar-Oracle-Captivator': {
+                emotional: {
+                    title: 'Solar Composure',
+                    desc: 'You naturally maintain calm in stressful situations and are often the emotional anchor for others.'
+                },
+                intelligence: {
+                    title: 'Strategic Oracle',
+                    desc: 'You excel at solving complex problems through systematic analysis and creative insight.'
+                },
+                famousness: {
+                    title: 'Magnetic Leader',
+                    desc: 'You naturally draw people in and command attention in social situations.'
+                },
+                strategies: [
+                    'Advanced emotional regulation techniques',
+                    'Strategic leadership training',
+                    'Public speaking workshops'
+                ]
+            }
+            // Add other combinations following the same pattern
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const archetype = decodeURIComponent(urlParams.get('type'));
+        
+        document.getElementById('archetypeTitle').textContent = `${archetype} Archetype`;
+        
+        const analysis = analysisData[archetype] || {
+            emotional: { title: 'Balanced Composer', desc: 'You maintain healthy emotional responses' },
+            intelligence: { title: 'Adaptive Thinker', desc: 'You balance creativity and logic' },
+            famousness: { title: 'Social Connector', desc: 'You navigate social situations comfortably' },
+            strategies: ['General self-improvement techniques']
+        };
+
+        document.getElementById('analysisContent').innerHTML = `
+            <div class="archetype-card">
+                <div class="trait">
+                    <h3>🌙 Emotional Profile: ${analysis.emotional.title}</h3>
+                    <p>${analysis.emotional.desc}</p>
+                </div>
+                
+                <div class="trait">
+                    <h3>🔮 Cognitive Style: ${analysis.intelligence.title}</h3>
+                    <p>${analysis.intelligence.desc}</p>
+                </div>
+
+                <div class="trait">
+                    <h3>💫 Social Presence: ${analysis.famousness.title}</h3>
+                    <p>${analysis.famousness.desc}</p>
+                </div>
+
+                <div class="trait">
+                    <h3>🌱 Growth Strategies</h3>
+                    <ul class="strategy-list">
+                        ${analysis.strategies.map(s => `<li>${s}</li>`).join('')}
+                    </ul>
+                </div>
+            </div>
+        `;
+    </script>
+</body>
+</html>

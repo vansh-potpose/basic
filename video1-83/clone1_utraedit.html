@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UltraEdit</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI';
+        }
+
+        .navbar {
+            display: flex;
+            position: sticky;
+            top: 0px;
+            margin: 20px;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.5s ease-in-out 0.05s;
+        }
+        .navbara:hover{
+            background-color: white;
+        }
+        ol {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px 2px 2px 25vw;
+        }
+
+        .navbar ol li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        .info {
+            margin: 10vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tittle {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 60vw;
+        }
+
+        .tittle p {
+            font-size: 23px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .tittle .logo img {
+            padding: 10px 10px 0px 50px;
+        }
+
+        .tittle button {
+            background-color: #0693e3;
+            color: white;
+            border: none;
+            margin: 30px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .tittle .logo {
+            font-size: 45px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 290px 290px 290px;
+            justify-content: center;
+        }
+
+        .item {
+            background-color: #d7d2c157;
+            margin: 20px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .item button {
+            margin: 20px 20px 15px 20px;
+            background-color: #3fcc3f;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+        }
+
+        .lower {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+        }
+
+        .lower .tep {
+            font-size: 30px;
+        }
+        .box{
+            background-color: #4a4d4f;
+            height: 80vh;
+            display: flex;
+            align-items: end;
+          
+
+        }
+        .ball{
+            background-color: rgb(106, 181, 181);
+            color: white;
+            height: 100px;
+            border-radius: 50%  ;
+            position: absolute;
+            animation: sidway 3s linear infinite ,updown 1s ease-out infinite alternate ;
+            width: 100px;
+           
+        }
+        @keyframes updown {
+         from{
+
+            bottom: 0;
+         }
+          to{
+            bottom: 100%;
+          }
+          
+          
+        }
+        @keyframes sidway{
+           from{
+            left: 0;
+        }
+        to{
+            left: 100%;
+        }
+        
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar navbara">
+
+            <img src="UE-Logo-1.webp" height="50vh" alt="logo">
+            <div class="right">
+                <ol>
+                    <li><a href="#">Products</a> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                            height="24" color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <li><a href="#">Pricing</a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                            height="24" color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <li><a href="#">Resources</a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                            height="24" color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <li><a href="#">About us</a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                            height="24" color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <li><a href="#">Security and Compilance</a><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <li><a href="#">&copy;</a></li>
+                </ol>
+            </div>
+
+        </div>
+        <div class="info">
+            <div class="tittle">
+
+                <p class="logo">Download <b>UltraEdit</b> for Windows <img src="h1_img.png" height="30vh" alt="logo">
+                </p>
+                <p>Download and try UltraEdit before you buy it! This download includes the full Windows version of the
+                    text editor</p>
+                <button>DOWNLOAD MAC OR LINUX VERSION</button>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <div class="lower">
+            <p class="tep">Download UltraEdit </p>
+            <p>&nbsp; v2024.0(released 04/19/2024) | Hotfix</p>
+        </div>
+        <div class="container">
+            <div class="item">
+                <h3>English</h3>
+                <p>...</p><button>Download 64-bit</button>
+            </div>
+            <div class="item">
+                <h3>Deutsch</h3>
+                <p>German</p><button>Download 64-bit</button>
+            </div>
+            <div class="item">
+                <h3>Italiano</h3>
+                <p>Italian</p><button>Download 64-bit</button>
+            </div>
+            <div class="item">
+                <h3>Español</h3>
+                <p>Spanish</p><button>Download 64-bit</button>
+            </div>
+            <div class="item">
+                <h3>français</h3>
+                <p>French</p><button>Download 64-bit</button>
+            </div>
+            <div class="item">
+                <h3>Português brasileiro</h3>
+                <p>Brazilian Portuguese</p><button>Download 64-bit</button>
+            </div>
+            <div class="item">
+                <h3>日本</h3>
+                <p>Japanese</p><button>Download 64-bit</button>
+            </div>
+            <div class="item">
+                <h3>한국어</h3>
+                <p>Korean</p><button>Download 64-bit</button>
+            </div>
+            <div class="item">
+                <h3>中国</h3>
+                <p>Chinese</p><button>Download 64-bit</button>
+            </div>
+            <div class="item">
+                <h3>中國</h3>
+                <p>Traditional Chinese</p><button>Download 64-bit</button>
+            </div>
+        </div>
+    </main>
+<footer>
+    <!-- <p class="box">hello and bye</p> -->
+    <div class="box">
+        <div class="ball"></div>
+    </div>
+    <!-- <div class="box"></div> -->
+</footer>
+</body>
+
+</html>

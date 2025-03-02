@@ -1,0 +1,96 @@
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            background-color: #fff;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        input[type="email"],
+        select,
+        input[type="checkbox"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 2px solid #f43838;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #e33232;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ff0000;
+        }
+
+        input[type="checkbox"] {
+            margin-bottom: 20px;
+        }
+
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+           
+        }
+
+        .radio-group {
+            margin-bottom: 10px;
+            
+        }
+
+        .radio-group label {
+            float: left;
+            margin-right: 10px;
+            
+        }
+.contains{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    width: 55px;
+    height: 55px;
+    border: 3px solid black;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
